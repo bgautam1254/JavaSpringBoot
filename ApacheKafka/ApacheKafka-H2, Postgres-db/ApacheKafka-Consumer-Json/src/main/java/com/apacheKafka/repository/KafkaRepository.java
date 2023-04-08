@@ -1,0 +1,10 @@
+package com.apacheKafka.repository;
+
+import com.apacheKafka.entity.KafkaEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface KafkaRepository extends JpaRepository<KafkaEntity, Long> {
+
+}

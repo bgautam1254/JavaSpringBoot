@@ -1,0 +1,36 @@
+Q: How to install RabbitMQ on Windows ?
+Ans:
+	Remember: Before installing RabbitMQ, we need to install Erlang.
+
+	Step 1: Download and install Erlang from 	--> https://erlang.org/download/otp_win64_22.1.exe
+
+	Step 2: Download and install RabbitMQ from 	--> https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.8.1/rabbitmq-server-3.8.1.exe
+
+	Step 3: In command prompt run this command 	--> rabbitmq-plugins enable rabbitmq_management
+
+	Step 4: Visit RabbitMQ Dashboard in browser	--> http://localhost:15672
+
+	Step 5: Login page with Credential as		
+							--> username: guest
+							--> password: guest
+
+	Step 6: After successfully login you should see RabbitMQ Home page.
+
+
+Q: How to send messages ?
+Ans:
+	Publisher is at --> 8081
+	Consumer is at 	--> 8082
+
+	Run PublisherModule
+	Open postman at		--> localhost:8091/publish
+	POST request (json) 	--> 	{
+ 						"message": "chickens"
+					}
+
+	Run PublisherModule
+	Open postman at		--> localhost:8091/publish1
+	POST request (text) 	--> "Hello new world !!!"
+
+	Run ConsumerModule
+	in console you will recieve your messages...
